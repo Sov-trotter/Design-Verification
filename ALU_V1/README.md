@@ -4,6 +4,6 @@
 
 
 ### Block Diagram
-![BLOCK_DIAGRAM](ALU Block Diagram.jpg)
+![BLOCK_DIAGRAM](ALU_Block_Diagram.jpg)
 
 
