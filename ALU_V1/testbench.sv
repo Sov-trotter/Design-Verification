@@ -36,7 +36,6 @@ module top;
 
   
   initial begin
-  
   	uvm_config_db #(virtual alu_interface)::set(null, "*", "vif", intf);
   end
   
@@ -60,7 +59,6 @@ module top;
   
   initial begin
     #5000
-    
     $display("SORRY! RAN OUT OF CLOCK CYCLES");
     $finish();
   end
@@ -68,13 +66,4 @@ module top;
 
   
   
-endmodule
-
-
-
-// virtual alu_interface vif; 
-//     if(!(    uvm_config_db #(virtual alu_interface)::get(null, "*", "vif", vif))) begin
-//       `uvm_error("MONITOR CLASS", "failed tog et handle")
-//     end
-  
-    
+endmodule    

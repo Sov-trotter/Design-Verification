@@ -7,7 +7,7 @@ class alu_scoreboard extends uvm_test;
  
   alu_sequence_item transactions[$]; // queue- FIFO
   
-  function new(string name = "alu_scoreboard", uvm_component parent);
+  function new(string name = "alu_scoreboard", uvm_component parent=null);
     super.new(name, parent);
     `uvm_info("Scoreboard_CLASS", "Inside constructor", UVM_HIGH);	
   endfunction
@@ -18,10 +18,7 @@ class alu_scoreboard extends uvm_test;
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     `uvm_info("Scoreboard_CLASS", "BUILD PHASE", UVM_HIGH);	
-  
       scoreboard_port = new("scoreboard_port", this);
-
-  
   endfunction: build_phase
   
   

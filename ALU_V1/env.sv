@@ -4,7 +4,7 @@ class alu_env extends uvm_env;
       alu_agent agnt;
   	  alu_scoreboard scb;
 
-  function new(string name="alu_env", uvm_component parent);
+  function new(string name="alu_env", uvm_component parent=null);
     super.new(name, parent);
     `uvm_info("ENV CLASS", "Inside constructor", UVM_HIGH);
   endfunction

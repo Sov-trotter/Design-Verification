@@ -4,12 +4,9 @@ class alu_monitor extends uvm_monitor;
   virtual alu_interface vif;
   alu_sequence_item item;
 
-  
   uvm_analysis_port #(alu_sequence_item) monitor_port;
   
-  
-  
-  function new(string name="alu_monitor", uvm_component parent);
+  function new(string name="alu_monitor", uvm_component parent=null);
     super.new(name, parent);
     `uvm_info("MONITOR CLASS", "Inside constructor", UVM_HIGH);
   endfunction
@@ -20,7 +17,7 @@ class alu_monitor extends uvm_monitor;
     `uvm_info("MONITOR CLASS", "Inside build phase", UVM_HIGH);
     
     if(!(uvm_config_db #(virtual alu_interface)::get(null, "*", "vif", vif))) begin
-      `uvm_error("MONITOR CLASS", "failed tog et handle");
+      `uvm_error("MONITOR CLASS", "failed to get interface handle");
     end
     
     monitor_port = new("monitor_port", this);
@@ -41,6 +38,9 @@ class alu_monitor extends uvm_monitor;
       wait(!vif.reset) // keep on waiting until the dut is not in reset mode
       
       // sample inputs
+      // general practice to use blocking for mon and non blocking for driver
+      // For monitor we use blocking assignments because there is no worry about race conditions,
+      // since monitors typically sample values on the clock edge and then just do stuff with them
       @(posedge vif.clock);
       	item.a = vif.a;
       	item.b = vif.b;

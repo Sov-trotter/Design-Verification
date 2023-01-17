@@ -5,7 +5,7 @@ class alu_agent extends uvm_agent;
   alu_monitor mon;
   alu_sequencer seqr;
   
-  function new(string name="alu_agent", uvm_component parent);
+  function new(string name="alu_agent", uvm_component parent=null);
     super.new(name, parent);
     `uvm_info("AGENT CLASS", "Inside constructor", UVM_HIGH);
   endfunction

@@ -7,7 +7,7 @@ class alu_test extends uvm_test;
   alu_base_sequence reset_seq;
   alu_test_sequence test_seq;
   
-  function new(string name = "alu_test", uvm_component parent);
+  function new(string name = "alu_test", uvm_component parent=null);
     super.new(name, parent);
     `uvm_info("TEST_CLASS", "Inside constructor", UVM_HIGH);	
   endfunction
@@ -25,10 +25,7 @@ class alu_test extends uvm_test;
   
   function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
-    `uvm_info("TEST_CLASS", "Connect PHASE", UVM_HIGH);	
-    
-    // connect monitor with scoreboard
-    
+    `uvm_info("TEST_CLASS", "Connect PHASE", UVM_HIGH);	    
   endfunction: connect_phase
   
   task run_phase (uvm_phase phase);
