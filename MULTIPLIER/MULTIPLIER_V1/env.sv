@@ -4,7 +4,7 @@ class mul_env extends uvm_env;
     mul_agent agnt;
     mul_scoreboard scb;
 
-    function new(string name="mul_env", uvm_component parent);
+    function new(string name="mul_env", uvm_component parent=null);
         super.new(name, parent);
     endfunction
 
