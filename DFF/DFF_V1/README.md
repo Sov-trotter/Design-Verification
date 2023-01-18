@@ -12,4 +12,4 @@
 ### Block Diagram
 ![BLOCK_DIAGRAM](DFF_Block_Diagram.jpg)
 
-
+![Link for EDA Playground](https://edaplayground.com/x/nVXp)
