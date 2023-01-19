@@ -6,4 +6,4 @@
 ### Block Diagram
 ![BLOCK_DIAGRAM](ALU_Block_Diagram.jpg)
 
-[Link for EDA Playground](https://edaplayground.com/x/sfmn)
+[Link for project on EDA Playground](https://edaplayground.com/x/sfmn)
