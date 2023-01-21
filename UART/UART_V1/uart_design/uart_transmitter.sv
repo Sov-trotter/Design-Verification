@@ -115,7 +115,6 @@ module uart_tx(
             done: begin
                 tx_done = 1'b1;
                 next_state = idle;
-                tx_start = 1'b0;
             end
         endcase
     end

@@ -1,4 +1,4 @@
-interface uart_if;
+interface uart_intf;
  logic clk, rst;
  logic tx_start, rx_start;
  logic [7:0] tx_data;
