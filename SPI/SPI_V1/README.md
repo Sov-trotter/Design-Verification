@@ -17,8 +17,8 @@ Assumptions:
 
 Special Signals
 - Chip select (CS)
-- main out, subnode in (MOSI)
-- main in, subnode out (MISO)
+- master out, slave in (MOSI)
+- master in, slave out (MISO)
 
 ### Architecture:
 ![Architecture](spi_mem.jpeg)
